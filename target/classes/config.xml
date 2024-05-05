@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- Using tag and element to inject value -->   
+	<bean class="com.springcore.Student" name="student1">
+
+		<property name="studentId">
+			<value>101</value>
+		</property>
+
+		<property name="studentName">
+			<value>Aadil</value>
+		</property>
+
+		<property name="studentAddress">
+			<value>SakiNaka</value>
+		</property>
+
+	</bean>
+	
+	<!-- Using Attribute to set Value -->
+	<bean class="com.springcore.Student" name="student2">
+
+		<property name="studentId" value="102" />
+
+		<property name="studentName" value="NOOR" />
+
+		<property name="studentAddress" value="MUMBAI" />
+
+	</bean>
+
+	<!-- Using P schema to set value -->
+	<bean class="com.springcore.Student" name="student3"
+		p:studentId="103" p:studentName="KHAN" p:studentAddress="ANDHERI" />
+
+</beans>

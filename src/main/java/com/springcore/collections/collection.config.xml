@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://wwww.springframework.org/schema/context"
+
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:integration="http://www.springframework.org/schema/integration"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/integration
+           http://www.springframework.org/schema/integration/spring-integration-1.0.xsd">
+
+	<bean class="com.springcore.collections.Employee" name="employee1">
+
+		<property name="name" value="Aadil" />
+
+		<property name="phones">
+			<list>
+				<value>908797868</value>
+				<value>34567890</value>
+				<value>345678901</value>
+				<value>9876546786</value>
+				<null></null>
+			</list>
+		</property>
+
+		<property name="addresses">
+			<set>
+				<value>sakinaka</value>
+				<value>andheri</value>
+				<value>pune</value>
+				<value>delhi</value>
+				<value>delhi</value>
+			</set>
+		</property>
+
+		<property name="courses">
+			<map>
+				<entry key="Java" value="2month" />
+				<entry key="python" value="3month" />
+				<entry key="html" value="1month" />
+				<entry key="css" value="1.5month" />
+				
+			</map>
+		</property>
+
+		<property name="properties">
+			<props>
+				<prop key="sname">Noor</prop>
+				<prop key="learn">Spring Core</prop>
+			</props>
+
+		</property>
+	</bean>
+
+</beans>

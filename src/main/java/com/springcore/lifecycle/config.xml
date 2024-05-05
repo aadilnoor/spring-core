@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+                           
+	<!-- Your bean definitions and other configurations go here -->
+	<!-- Enable annotation-based configuration -->
+	
+	<context:annotation-config />
+
+	<!-- Using Attribute to set Value -->
+	<!-- <bean class="com.springcore.lifecycle.Books" name="book1" init-method="init" 
+		destroy-method="destroy"> <property name="name" value="java programing" /> 
+		<property name="price" value="1000" /> </bean> -->
+
+	<!-- <bean class="com.springcore.lifecycle.Notebooks" name="notebook1"> 
+		<property name="price" value="100" /> <property name="pages" value="230-page" 
+		/> </bean> -->
+
+	<bean class="com.springcore.lifecycle.AnnotationExample"
+		name="example">
+		<property name="pen" value="10" />
+		<property name="price" value="100" />
+	</bean>
+
+
+</beans>
